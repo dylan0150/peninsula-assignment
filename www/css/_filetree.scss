@@ -1,0 +1,27 @@
+.files-container {
+    padding: 0 0 0 15px;
+    border-left: 1px solid black;
+}
+
+.file {
+    .view {
+        display: block;
+        position: relative;
+        span.label {
+           position: absolute;
+           left: 25px;
+        }
+        span.date {
+            position: absolute;
+            right: 0px;
+         }
+    }
+    .view:hover {
+        background-color: #efefef;
+    }
+}
+
+.right {
+    position: absolute;
+    right: 0px;
+}

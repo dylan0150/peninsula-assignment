@@ -1,0 +1,42 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  position: relative; }
+
+.center-box {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%); }
+
+.center-box--main {
+  width: 90%;
+  padding: 15px; }
+  .center-box--main .inner {
+    width: 100%;
+    height: 100%;
+    position: relative; }
+
+.files-container {
+  padding: 0 0 0 15px;
+  border-left: 1px solid black; }
+
+.file .view {
+  display: block;
+  position: relative; }
+  .file .view span.label {
+    position: absolute;
+    left: 25px; }
+  .file .view span.date {
+    position: absolute;
+    right: 0px; }
+.file .view:hover {
+  background-color: #efefef; }
+
+.right {
+  position: absolute;
+  right: 0px; }
+
+.click {
+  cursor: pointer; }
+
+/*# sourceMappingURL=main.css.map */

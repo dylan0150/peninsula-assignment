@@ -1,0 +1,16 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item" ng-repeat="state in states" ng-if="!state.abstract" ng-class="{ 'active': state.active }">
+                <a ui-sref="{{state.name}}" class="nav-link" href="#">{{ state | custom_state }}</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+
+<ui-view></ui-view>
+
+<footer>
+
+</footer>

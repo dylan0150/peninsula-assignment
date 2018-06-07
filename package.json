@@ -1,0 +1,16 @@
+{
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.17.5",
+    "opn-cli": "^3.1.0"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "postinstall": "cd www && npm install",
+    "start": "opn 'http://localhost:8080/' && nodemon index.js 8080"
+  },
+  "author": "Dylan Hanner"
+}

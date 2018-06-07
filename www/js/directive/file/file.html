@@ -1,0 +1,11 @@
+<div class="file click">
+    <div class="view" ng-click="click()">
+        <i class="fa" ng-class="getClass()"></i>
+        <span class="label">{{ file.name }}</span>
+        <span class="date">{{ file.added | date }}</span>
+    </div>
+    <div class="files-container" ng-if="file.expanded">
+        <dir-file reverse="reverse" order="order" ng-repeat="subfile in file.files | orderBy : order : reverse" file="subfile"></dir-file>
+        <dir-upload parent-file="file"></dir-upload>
+    </div>
+</div>

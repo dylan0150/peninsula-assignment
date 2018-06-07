@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <div class="center-box center-box--main">
+        <form name="form.filter" class="inner" novalidate ng-submit="filter()">
+            <div class="form-group">
+                <label><i class="fa fa-search"></i> Search</label>
+                <input ng-model="formdata.filter.search" ng-change="filter()" placeholder="begin typing to search..." name="search" class="form-control" type="text">
+            </div>
+        </form>
+        <div class="inner">
+            <h5>Files <i class="fa click" title="Sort by name" ng-click="sort('name')" ng-class="filterIcon('name')"></i><span class="right">Date Added <i class="fa click" title="Sort by date" ng-click="sort('date')" ng-class="filterIcon('date')"></i></span></h5>
+            <dir-file reverse="reverse" order="order" file="root"></dir-file>
+        </div>
+    </div>
+</div>

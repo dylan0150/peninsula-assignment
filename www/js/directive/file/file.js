@@ -19,7 +19,7 @@ angular.module('dir.file',[])
                     return;
                 }
                 switch ( $scope.file.ext ) {
-                    default: alert($scope.file.name)
+                    
                 }
             }
 
@@ -27,7 +27,10 @@ angular.module('dir.file',[])
                 if ( $scope.file.files && Array.isArray($scope.file.files) ) {
                     return $scope.file.expanded ? "fa-folder-open" : "fa-folder";
                 }
-                switch ( $scope.file.ext ) {
+                switch ( $scope.file.type ) {
+                    case 'pdf': return 'fa-file-pdf';
+                    case 'doc': return 'fa-file-word';
+                    case 'csv': return 'fa-file-alt';
                     default: return "fa-file";
                 }
             }

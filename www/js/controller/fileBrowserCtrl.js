@@ -5,7 +5,7 @@ angular.module('ctrl.fileBrowser',['dir.file','dir.upload'])
     var timeout = $q.defer()
 
     $scope.root    = root_file
-    $scope.order   = ""
+    $scope.order   = "type"
     $scope.reverse = false
 
     $scope.filter = function() {

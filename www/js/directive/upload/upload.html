@@ -5,7 +5,7 @@
     ng-disabled="loading"
     ng-class="{ 'has-error': upload.error }"
 >
-    <i class="fa fa-upload" title="Upload file"></i>
+    <i class="fa fa-plus" title="Upload file"></i>
     <span ng-if="!loading && !upload.error && !upload.complete">{{ label != undefined ? label : "" }}</span>
     <span ng-if="loading">{{ upload.name }}: {{ upload.percent }}% complete...</span>
     <span class="has-error" ng-if="upload.error">{{ upload.name }}: Error!</span>

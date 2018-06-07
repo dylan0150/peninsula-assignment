@@ -1,7 +1,7 @@
 <div class="file click">
     <div class="view" ng-click="click()">
         <i class="fa" ng-class="getClass()"></i>
-        <span class="label">{{ file.name }}</span>
+        <span class="name">{{ file.name }}</span>
         <span class="date">{{ file.added | date }}</span>
     </div>
     <div class="files-container" ng-if="file.expanded">

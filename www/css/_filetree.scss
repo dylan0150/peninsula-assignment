@@ -7,14 +7,14 @@
     .view {
         display: block;
         position: relative;
-        span.label {
+        span.name {
            position: absolute;
            left: 25px;
         }
         span.date {
             position: absolute;
             right: 0px;
-         }
+        }
     }
     .view:hover {
         background-color: #efefef;
@@ -24,4 +24,8 @@
 .right {
     position: absolute;
     right: 0px;
+}
+
+.fa {
+    color: #4a4291;
 }

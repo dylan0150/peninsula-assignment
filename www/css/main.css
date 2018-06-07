@@ -23,7 +23,7 @@
 .file .view {
   display: block;
   position: relative; }
-  .file .view span.label {
+  .file .view span.name {
     position: absolute;
     left: 25px; }
   .file .view span.date {
@@ -35,6 +35,9 @@
 .right {
   position: absolute;
   right: 0px; }
+
+.fa {
+  color: #4a4291; }
 
 .click {
   cursor: pointer; }

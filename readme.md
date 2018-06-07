@@ -9,6 +9,6 @@ We have a section of our app where users can access documents that administrator
 
 ### Usage
 
-Install: `npm install`
-Run Tests: `npm test`
-Start: `npm start`
+1. Install: `npm install`
+2. Run Tests: `npm test`
+3. Start: `npm start`

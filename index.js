@@ -1,6 +1,5 @@
-const express    = require('express')
-const app        = express()
-const PORT       = 8080
+const  connect    = require('connect');
+const serveStatic = require('serve-static');
 
 let port;
 if ( process.argv.length > 2 && !isNaN( process.argv[2] ) ) {
@@ -9,5 +8,7 @@ if ( process.argv.length > 2 && !isNaN( process.argv[2] ) ) {
     port = 8080
 }
 
-app.use(express.static('www'))
-app.listen(PORT)
+
+connect().use(serveStatic("www")).listen(port, function(){
+    console.log('Server running on 8080...');
+});

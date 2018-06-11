@@ -34,7 +34,7 @@ angular.module('dir.file',[])
                     case 'doc': return 'fa-file-word';
                     case 'csv': return 'fa-file-alt';
                     case 'mov': return 'fa-file-video';
-                    default: return "fa-file";
+                    default   : return "fa-file";
                 }
             }
         }

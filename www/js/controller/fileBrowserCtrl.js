@@ -2,8 +2,6 @@ angular.module('ctrl.fileBrowser',['dir.file'])
 
 .controller('fileBrowserCtrl', function($scope, $q, root_file, files) {
 
-    var timeout = $q.defer()
-
     $scope.root    = root_file
     $scope.order   = "type"
     $scope.reverse = false
@@ -11,9 +9,7 @@ angular.module('ctrl.fileBrowser',['dir.file'])
     $scope.filter = function() {
         if ( !validateForm($scope.form.filter) ) { return; }
         load()
-        timeout.resolve()
-        timeout = $q.defer()
-        files.filter( $scope.formdata.filter, { timeout: timeout.promise } ).then(function(response) {
+        files.filter($scope.formdata.filter.search).then(function(response) {
             $scope.root = response
             load(true)
         })
@@ -46,7 +42,6 @@ angular.module('ctrl.fileBrowser',['dir.file'])
         }
         return true
     }
-
     function load(done) {
         $scope.loading = !done
     }

@@ -32,13 +32,13 @@ angular.module('service.files',[])
         })
     }
 
-    this.filter = function(form, headers) {
+    this.filter = function(search) {
         return $http.get("files.json").then(function(response) {
             return {
                 name: "/",
                 type: "folder",
                 expanded: true,
-                files: recursiveSearch(response.data, form.search)
+                files: recursiveSearch(response.data, search)
             }
         })
     }

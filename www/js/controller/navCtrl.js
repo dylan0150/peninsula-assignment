@@ -15,6 +15,7 @@ angular.module('ctrl.nav',['filter.state','dir.file'])
         $scope.modals.file = file
         $('#file.modal').modal('show')
     })
+    
     $scope.closeModal = function(id) {
         $('#'+id+'.modal').modal('hide')
     }

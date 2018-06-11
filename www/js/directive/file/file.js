@@ -1,5 +1,9 @@
 angular.module('dir.file',[])
-
+/**
+ * Recursive File-Tree Directive
+ * 
+ * @fires $emit#modals.file.show
+ */
 .directive('dirFile', function() {
     return {
         replace: true,

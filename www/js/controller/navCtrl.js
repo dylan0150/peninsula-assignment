@@ -1,5 +1,7 @@
 angular.module('ctrl.nav',['filter.state','dir.file'])
-
+/**
+ * @listens $scope#modals.file.show
+ */
 .controller('navCtrl', function($scope, $state) {
 
     $scope.modals = {}

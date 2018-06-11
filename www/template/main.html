@@ -18,13 +18,13 @@
     <div class="modal-content">
         <div class="modal-header">
             <h5 class="modal-title">{{ modals.file.name }}</h5>
-            <small><em>{{ modals.file.added | date }}</em></small>
+            <button type="button" class="close" ng-click="closeModal('file')">
+                <span>&times;</span>
+            </button>
         </div>
         <div class="modal-body">
-            <p>{{ modals.file.type }}</p>
-        </div>
-        <div class="modal-footer">
-            <button class="btn btn-action-no" ng-click="closeModal('file')">Close</button>
+            <p>Added: {{ modals.file.added | date }}</p>
+            <p>Type:  {{ modals.file.type }}</p>
         </div>
     </div>
 </div>

@@ -18,9 +18,7 @@ angular.module('dir.file',[])
                     $scope.file.expanded = !$scope.file.expanded
                     return;
                 }
-                switch ( $scope.file.ext ) {
-                    
-                }
+                $scope.$emit('modals.file.show', $scope.file)
             }
 
             $scope.getClass = function() {
@@ -31,16 +29,10 @@ angular.module('dir.file',[])
                     case 'pdf': return 'fa-file-pdf';
                     case 'doc': return 'fa-file-word';
                     case 'csv': return 'fa-file-alt';
+                    case 'mov': return 'fa-file-video';
                     default: return "fa-file";
                 }
             }
-
-            $scope.$on('dir.upload.start', function(event, file, id) {
-                console.debug(file)
-            })
-            $scope.$on('dir.upload.success', function(event, file_upload_result, id) {
-                console.debug(file_upload_result)
-            })
         }
     }
 })

@@ -1,11 +1,21 @@
-angular.module('ctrl.nav',['filter.state'])
+angular.module('ctrl.nav',['filter.state','dir.file'])
 
 .controller('navCtrl', function($scope, $state) {
+
+    $scope.modals = {}
 
     $scope.$on('transition.end', function(event, transition) {
         refresh(transition.to())
     })
     refresh()
+
+    $scope.$on('modals.file.show', function(event, file) {
+        $scope.modals.file = file
+        $('#file.modal').modal('show')
+    })
+    $scope.closeModal = function(id) {
+        $('#'+id+'.modal').modal('hide')
+    }
 
     function refresh(to) {
         $scope.states = $state.get().filter(function(state) {

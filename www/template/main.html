@@ -8,9 +8,23 @@
     </nav>
 </header>
 
-
 <ui-view></ui-view>
 
 <footer>
 
 </footer>
+
+<div class="modal" id="file">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title">{{ modals.file.name }}</h5>
+            <small><em>{{ modals.file.added | date }}</em></small>
+        </div>
+        <div class="modal-body">
+            <p>{{ modals.file.type }}</p>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-action-no" ng-click="closeModal('file')">Close</button>
+        </div>
+    </div>
+</div>

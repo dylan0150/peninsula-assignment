@@ -1,4 +1,4 @@
-angular.module('ctrl.fileBrowser',['dir.file','dir.upload'])
+angular.module('ctrl.fileBrowser',['dir.file'])
 
 .controller('fileBrowserCtrl', function($scope, $q, root_file, files) {
 

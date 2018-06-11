@@ -6,6 +6,5 @@
     </div>
     <div class="files-container" ng-if="file.expanded">
         <dir-file reverse="reverse" order="order" ng-repeat="subfile in file.files | orderBy : order : reverse" file="subfile"></dir-file>
-        <dir-upload parent-file="file"></dir-upload>
     </div>
 </div>

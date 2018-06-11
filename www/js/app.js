@@ -46,11 +46,6 @@ angular.module('app', [
                 }
             }
         })
-        .state('file', {
-            url: '/file/{id}/details',
-            controller: 'fileCtrl',
-            templateUrl: 'template/file.html'
-        })
 
     $urlRouterProvider
         .otherwise('/main/browse');
